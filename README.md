@@ -1,2 +1,2 @@
 # Frontend
-학교 내에서 분실물을 찾을 수 있도록 도와주는 커뮤니티 사이트 클라이언트
+find-together (FE)
