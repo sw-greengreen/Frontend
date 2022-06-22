@@ -103,8 +103,7 @@ function Navigation(props) {
              
 
               <Modal open={modalOpen} close={closeModal} header="Modal heading">
-                <main> {props.children} </main>에 내용이 입력된다. 리액트 함수형 모달
-                팝업창입니다. 쉽게 만들 수 있어요. 같이 만들어봐요!
+                <main> {props.children} </main>
               </Modal>
             
       </div>

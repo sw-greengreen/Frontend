@@ -6,6 +6,7 @@ import BoardUpload from "./board/boardUpload";
 import BoardDetail from "./board/boardDetail";
 import PleaseFind from "./board/pleaseFind";
 import FindIt from "./board/findIt";
+import FindBoardUpload from "./board/findBoardUpload";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/boardDetail" element={<BoardDetail />} />
           <Route path="/pleaseFind" element={<PleaseFind />} />
           <Route path="/findIt" element={<FindIt />} />
+          <Route path="/findBoardUpload" element={<FindBoardUpload />} />
         </Routes>
       </Router>
        {/* <Footer /> */}
