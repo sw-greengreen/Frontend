@@ -1,0 +1,25 @@
+#navigation{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15%;
+}
+
+#navigation .logoFrame{
+    display: flex;
+}
+
+#navigation .find-please span{
+    border-right: 1px solid rgb(204, 204, 204);
+}
+
+#navigation .login-join{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+    background-color: #12db64;
+    border-radius: 30px;
+    height: 40px;
+    width: 150px;
+}
