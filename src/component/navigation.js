@@ -7,14 +7,21 @@ function Navigation(props) {
   const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
   const [isUpload, setIsUpload] = useState(false);
+  const [isFindIt, setFindIt] = useState(false);
 
 
 
-  console.log(window.location.pathname);
-  
+  if(window.location.pathname !=="/boardUpload" && window.location.pathname !=="/pleaseFind" && isUpload){
+    setIsUpload(false);
+  }
+
   useEffect(() => {
     if(window.location.pathname ==="/boardUpload" || window.location.pathname ==="/pleaseFind" && !isUpload){
       setIsUpload(true);
+    }
+
+    if(window.location.pathname ==="/findIt" && !isFindIt){
+      setFindIt(true);
     }
     document.addEventListener('click', clickModalOutside);
 
@@ -45,13 +52,17 @@ function Navigation(props) {
               {isUpload ? 
                   <div className='find-please'>
                     
-                  <span style={{color:"#12DB64"}} onClick={() => navigate("/pleaseFind")}>찾아주세요&nbsp;</span>&nbsp;<span>찾았어요</span>
+                  <span style={{color:"#12DB64"}} onClick={() => navigate("/pleaseFind")}>찾아주세요&nbsp;</span>&nbsp;<span onClick={()=>{navigate("/findIt")}}>찾았어요</span>
                 </div>
              
-              :
-              <div className='find-please'>
-              <span onClick={() => navigate("/pleaseFind")}>찾아주세요&nbsp;</span>&nbsp;<span>찾았어요</span>
-            </div>
+              :isFindIt?  <div className='find-please'>
+                    
+                          <span onClick={() => navigate("/pleaseFind")}>찾아주세요&nbsp;</span>&nbsp;<span style={{color:"#12DB64"}}  onClick={()=>{navigate("/findIt")}}>찾았어요</span>
+                        </div>
+            :
+                  <div className='find-please'>
+                  <span onClick={() => navigate("/pleaseFind")}>찾아주세요&nbsp;</span>&nbsp;<span onClick={()=>{navigate("/findIt")}}>찾았어요</span>
+                </div>
               
               
               }
@@ -61,6 +72,15 @@ function Navigation(props) {
           <div className='loginFrame'>
               
           <div className='login-text'>| <span onClick={()=>{navigate("/boardUpload")}}>글쓰기</span> | <span>마이페이지</span> | <span className='alarm' onClick={openModal}>알림</span> | </div>
+          <div className='logout'>
+            로그아웃
+          </div>
+          
+          </div>
+          : isFindIt? 
+          <div className='loginFrame'>
+              
+          <div className='login-text'>|  <span onClick={()=>{navigate("/findBoardUpload")}}>글쓰기</span> | 마이페이지 | <span className='alarm' onClick={openModal}>알림</span> | </div>
           <div className='logout'>
             로그아웃
           </div>
