@@ -1,38 +1,44 @@
+// import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 import "./registerPage.css"
+import Swal from "sweetalert2"
+import { call } from "../../hooks/usefetch"
 
 function RegisterPage() {
-  const [User, setUser] = useState({"username":"", "userId":"", "password" : "", "passwordCheck":"", "userTel":""});
+  const [User, setUser] = useState({"username":"", "userId":"", "password" : "", "userTel":""});
+
+  const [confirmPW, setConfirmPW] = useState("");
+  // const navigate = useNavigate();
   
-  // const onRegister = (e) =>{
-  //   e.preventDefault();
-
-  //   if (User.password !== User.passwordCheck){
-  //     return alert("비밀번호와 일치하지 않습니다.")
-  //   }
-  //   else{
-  //       register(User).then((response)=>{
-  //           if(response.success){
-  //               Swal.fire({
-  //                   icon: 'success',
-  //                   title: '로그인에 성공하셨습니다.',
-  //                 })
-  //                 .then((result)=>{
-  //                     if(result.isConfirmed){
-  //                         navigate("/")
-  //                     }
-  //                 })
-  //           }
-  //           else{
-  //               Swal.fire({
-  //                   icon: 'error',
-  //                   title: '로그인에 실패하셨습니다.',
-  //                 })
-  //           }
-  //       });
-  //     } 
-
-  //   }
+  const registerValid = async (e)=>{
+    e.preventDefault();
+    if (confirmPW === User.password){
+      console.log("비밀번호 맞음")}
+    //   call("/auth/signup", "POST", User)
+    //     .then((response)=>{
+    //         if(response.success){
+    //           Swal.fire({
+    //               icon: 'success',
+    //               title: '회원가입에 성공했습니다.',
+    //             })
+    //             .then((result)=>{
+    //                 if(result.isConfirmed){
+    //                     navigate("/login")
+    //                 }
+    //             })
+    //         }
+    //         else{
+    //           Swal.fire({
+    //               icon: 'error',
+    //               title: '회원가입에 실패했습니다.',
+    //             })
+    //         }
+    //     })
+    //   } 
+    else{
+      alert("비밀번호를 올바르게 입력해주세요")
+    }
+  }
 
   return (
     <div class="registerPage">
@@ -43,9 +49,8 @@ function RegisterPage() {
               alt="회원가입 로고 이미지"
               />
         </figure>
-
-        {/* <form className="registerForm" onSubmit={(e)=>{onRegister(e)}}> */}
-        <form className="registerForm">
+          <form className="registerForm" onSubmit={(e)=>{registerValid(e)}}>
+        {/* <form className="registerForm"> */}
           <div class="textWrapper">
             <div class="title">본인 정보를 입력해주세요</div>
             <div class="requiredText">&nbsp; *필수작성</div>
@@ -71,7 +76,7 @@ function RegisterPage() {
               <div class="requiredText">*</div>
             </div>
             <input type={"password"} class="register__input" autoComplete="current-password" placeholder="숫자, 영문, 최소8자" pattern="^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$" required onChange={(e) =>{setUser({...User, "password" : e.target.value})}}></input>
-            <input type={"password"} class="register__input" autoComplete="current-password-check" placeholder="비밀번호 확인" required onChange={(e) =>{setUser({...User, "passwordCheck" : e.target.value})}}></input>
+            <input type={"password"} class="register__input" autoComplete="current-password-check" placeholder="비밀번호 확인" required onChange={(e) =>{setConfirmPW(e.target.value);}}></input>
           </div>
 
           <div class="wrapper">
