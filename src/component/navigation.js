@@ -56,5 +56,5 @@ function Navigation(props) {
       </div>
     );
   }
-  
+ 
   export default Navigation;
