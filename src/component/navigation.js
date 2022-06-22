@@ -38,7 +38,6 @@ function Navigation(props) {
               </div>
           </div>
           <div className='loginFrame'>
-
               {/* <div className='login-join'>
                 로그인/회원가입
               </div> */}
@@ -57,6 +56,4 @@ function Navigation(props) {
       </div>
     );
   }
-  
   export default Navigation;
-
