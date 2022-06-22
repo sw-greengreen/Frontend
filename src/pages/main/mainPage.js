@@ -55,7 +55,7 @@ function mainPage() {
         <div className='item-list'>
             <div className='boxFrame'>
               <div className='pictureFrame'>
-                <img src='/img/test_img.jpg'></img>
+                <img src='/img/test_img.jpg' alt='board 이미지 입니다.'></img>
               </div>
               <div className='board-title'>
                 <h5>121. 회색 가죽지갑 찾아가...</h5>
@@ -73,7 +73,7 @@ function mainPage() {
             </div>
             <div className='boxFrame'>
               <div className='pictureFrame'>
-                <img src='/img/test_img.jpg'></img>
+                <img src='/img/test_img.jpg' alt='board 이미지 입니다.'></img>
               </div>
               <div className='board-title'>
                 <h5>53. 국민은행 체크카드 민...</h5>
