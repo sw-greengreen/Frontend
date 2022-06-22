@@ -17,9 +17,35 @@
     display: flex;
     align-items: center;
     justify-content:center;
+    align-items: center;
     color: white;
     background-color: #12db64;
     border-radius: 30px;
     height: 40px;
     width: 150px;
+}
+
+#navigation .logout{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+    background-color: #12db64;
+    border-radius: 30px;
+    height: 40px;
+    width: 100px;
+}
+
+#navigation .loginFrame{
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+#navigation .login-text{
+    margin-right: 50px;
+}
+
+#navigation .alarm{
+    cursor: pointer;
 }
