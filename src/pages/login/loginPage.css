@@ -1,13 +1,13 @@
 .loginPage{
-  background: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 90vh;
 }
 
 .loginForm{
-  border-radius: 20px;
+  border-radius: 50px;
   padding: 50px;
   padding-top: 100px;
   padding-bottom: 200px;
@@ -16,7 +16,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 5px 5px 5px 5px rgb(217,215,216);
+  box-shadow: 5px 5px 10px 1px #b2b2b2;
+}
+
+.loginregister__input::placeholder{
+  color: #cccccc;
 }
 
 .loginregister__input, .loginregister__button {
@@ -32,7 +36,9 @@
   background: #12DB64;
   color: #ffffff;
   border-style: none;
+  font-weight: bold;
 }
+
 label{
   color: RGB(215,215,215);
 }
@@ -49,7 +55,6 @@ label{
   text-decoration: none;
   text-align: right;
 }
-
 
 .register__button, .register__button:hover, .register__button::after, .register__button::before{
   padding-top: 20px;
