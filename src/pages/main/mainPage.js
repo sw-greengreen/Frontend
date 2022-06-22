@@ -1,12 +1,15 @@
-import './mainPage.css';
+import './MainPage.css';
 import { BsFillCaretUpFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
 import {BsCaretLeft} from "react-icons/bs";
 import {BsCaretRight} from "react-icons/bs";
 import {BsChevronLeft} from "react-icons/bs";
 import {BsChevronRight} from "react-icons/bs";
-function mainPage() {
+import { useNavigate} from "react-router-dom";
+function MainPage() {
+  const navigate = useNavigate();
   
+
     return (
       <div id="mainPage">
         <div className="banner">
@@ -53,7 +56,7 @@ function mainPage() {
           </div>
         </div>
         <div className='item-list'>
-            <div className='boxFrame'>
+            <div className='boxFrame' onClick={()=>{navigate("/boardDetail")}}>
               <div className='pictureFrame'>
                 <img src='/img/test_img.jpg'></img>
               </div>
@@ -71,7 +74,7 @@ function mainPage() {
                 </div>
               </div>
             </div>
-            <div className='boxFrame'>
+            <div className='boxFrame'  onClick={()=>{navigate("/boardDetail")}}>
               <div className='pictureFrame'>
                 <img src='/img/test_img.jpg'></img>
               </div>
@@ -217,4 +220,4 @@ function mainPage() {
     );
   }
   
-  export default mainPage;
+  export default MainPage;
