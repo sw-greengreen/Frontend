@@ -1,0 +1,103 @@
+#boardDetail{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 4px 0px inset !important;
+}
+
+#boardDetail .boardFrame{
+    margin: 0 15%;
+    padding-top: 3%;
+    display: flex;
+}
+
+#boardDetail .pictureFrame{
+    position: relative;
+    width: 30%;
+    background-color: white;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 4%;
+    overflow: hidden;
+}
+#boardDetail .pictureFrame img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#boardDetail .item-content-frame{
+    width: 60%;
+    
+}
+#boardDetail .item-content-detail{
+    position: relative;
+    border: 1px solid rgb(207, 207, 207);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    height: 230px;
+    padding: 10px;
+}
+
+#boardDetail .item-content-detail button{
+    position: absolute;
+    border: 1px solid #12DB64;;
+    background-color: #12DB64;;
+    color: white;
+    border-radius: 10px;
+    width: 18%;
+    height: 40px;
+    bottom: 4%;
+    right: 4%;
+}
+
+#boardDetail .item-title span{
+    margin-left: 5%;
+}
+
+#boardDetail .comment-frame{
+    margin: 0 17%;
+}
+
+#boardDetail .comment-frame table{
+    border: 1px solid rgb(207, 207, 207);
+    width: 100%;
+    margin-left: 2.5%;
+}
+
+
+#boardDetail .comment-frame tr{
+    height: 100px;
+}
+
+#boardDetail .comment-frame tr, th, td {
+    border: 1px solid #444444;
+    padding: 10px;
+  }
+
+  #boardDetail .comment-frame p:first-child{
+    margin-left: 2.5%;
+  }
+
+  tr td{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  #boardDetail .comment-frame input {
+    margin-left: 2.5%;
+    width: 90%;
+    margin-top: 2%;
+    height: 50PX;
+    background-color: rgb(229, 229, 229);
+    border:rgb(229, 229, 229);;
+  }
+
+  #boardDetail .comment-frame button{
+    border-radius: 10px;
+    width: 7%;
+    height: 50px;
+    border: 1px solid #12DB64;;
+    background-color: #12DB64;;
+    color: white;
+  }

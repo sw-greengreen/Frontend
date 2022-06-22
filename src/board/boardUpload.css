@@ -1,0 +1,137 @@
+#boardUpload{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 4px 0px inset !important;
+
+}
+
+#boardUpload .boardFrame{
+    margin: 0 15%;
+    padding-top: 5%;
+}
+
+#boardUpload .boardFrame span:first-child{
+    color: #12DB64;
+}
+
+#boardUpload .board-title h5{
+    font-weight: bold;
+    margin-right: 5%;
+}
+
+#boardUpload .board-title p{
+    color: #12DB64;
+}
+
+#boardUpload .board-title{
+    margin-top: 4%;
+    display: flex;
+}
+
+#boardUpload hr{
+    height: 4px;
+    margin: 0;
+    
+}
+
+
+#boardUpload .board-body{
+    margin: 0 15%;
+    padding-top: 2%;
+    display: flex;
+}
+
+#boardUpload .picture-frame{
+    position: relative;
+    width: 150px;
+    background-color: rgb(229, 229, 229);
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 4%;
+    overflow: hidden;
+}
+#boardUpload .picture-frame img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#boardUpload .board-hash{
+    margin: 0 15%;
+}
+
+#boardUpload .board-hash h5{
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 15%;
+}
+
+
+
+#boardUpload .board-hashtags{
+    margin-left: 15%;
+    display: flex;
+    margin-bottom: 1%;
+}
+
+
+
+#boardUpload .board-hashtag{
+    border: 1px solid rgb(229, 229, 229);
+    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 0 20px;
+}
+
+#boardUpload .board-hashtag-empty{
+    border: 1px solid rgb(229, 229, 229);
+    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 150px;
+}
+
+#boardUpload .last-tags{
+    margin-bottom: 3%;
+}
+
+#boardUpload .title{
+    margin-top: 3%;
+    font-weight: bold;
+    display: flex;
+}
+
+#boardUpload .title input{
+height: 25px;
+width: 80%;
+padding: 10px;
+}
+
+#boardUpload .content textarea{
+    width: 80%;
+    height: 150px;
+    padding-left: 10px;
+}
+
+#boardUpload .content{
+    margin-top: 3%;
+    font-weight: bold;
+    display: flex;
+
+}
+
+#boardUpload button{
+    float: right;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 10%;
+    background-color: #12DB64;
+    border:1px solid #12DB64;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin-right: 10px;
+    height: 40px;
+}
