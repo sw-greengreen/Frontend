@@ -1,5 +1,5 @@
 #navigation{
-    height: 100px;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     margin: 0 15%;
@@ -9,8 +9,18 @@
     display: flex;
 }
 
+#navigation .find-please{
+    display: flex;
+    align-items: center;
+}
+
 #navigation .find-please span{
     border-right: 1px solid rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+#navigation .find-please span:last-child{
+    border: none;
 }
 
 #navigation .login-join{
