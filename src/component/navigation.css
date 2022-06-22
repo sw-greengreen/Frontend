@@ -1,5 +1,5 @@
 #navigation{
-    height: 100px;
+    height: 120px;
     display: flex;
     justify-content: space-between;
     margin: 0 15%;
@@ -9,11 +9,34 @@
     display: flex;
 }
 
+#navigation .find-please{
+    display: flex;
+    align-items: center;
+}
+
 #navigation .find-please span{
     border-right: 1px solid rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+#navigation .find-please span:last-child{
+    border: none;
 }
 
 #navigation .login-join{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    align-items: center;
+
+    color: white;
+    background-color: #12db64;
+    border-radius: 30px;
+    height: 40px;
+    width: 150px;
+}
+
+#navigation .logout{
     display: flex;
     align-items: center;
     justify-content:center;
@@ -21,5 +44,23 @@
     background-color: #12db64;
     border-radius: 30px;
     height: 40px;
-    width: 150px;
+    width: 100px;
+}
+
+#navigation .loginFrame{
+    display: flex;
+    align-items: center;
+    width: 400px;
+}
+
+#navigation .login-text{
+    margin-right: 50px;
+}
+
+#navigation .login-text span{
+    cursor: pointer;
+}
+
+#navigation .alarm{
+    cursor: pointer;
 }
