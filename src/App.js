@@ -1,5 +1,6 @@
 import MainPage from "./pages/main/mainPage";
 import LoginPage from "./pages/login/loginPage";
+import FindUserPage from "./pages/finduser/findUserPage";
 import RegisterPage from "./pages/register/registerPage";
 import Navigation from "./component/navigation";
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/findUser" element={<FindUserPage />} />
           <Route path="/register" element={<RegisterPage />} />
         </Routes>
       </Router>
