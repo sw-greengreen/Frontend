@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './findUserPage.css';
+import './findUserIDPage.css';
 
 function FindUserPage() {
   const [User, setUser] = useState({"username":"", "userTel":""});
@@ -17,7 +17,7 @@ function FindUserPage() {
         <form className="findForm">
           <div class="wrapper">
             <div class="textWrapper">
-              <div class="text">이름 / username</div>
+              <div class="text">이름</div>
               <div class="requiredText">*</div>
             </div>
             <input type={"text"} class="find__input" autoComplete="username" placeholder="" required onChange={(e) =>{setUser({...User, "username" : e.target.value})}}></input>
