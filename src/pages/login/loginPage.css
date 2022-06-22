@@ -1,0 +1,58 @@
+.loginPage{
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginForm{
+  border-radius: 20px;
+  padding: 50px;
+  padding-top: 100px;
+  padding-bottom: 200px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 5px 5px rgb(217,215,216);
+}
+
+.loginregister__input, .loginregister__button {
+  width: 300px;
+  height: 50px;
+  padding-left: 10px;
+  margin: 10px;
+  outline-style: none;
+}
+
+.loginregister__button{
+  padding: 0;
+  background: #12DB64;
+  color: #ffffff;
+  border-style: none;
+}
+label{
+  color: RGB(215,215,215);
+}
+
+.loginSettings{
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+
+.findUser__button, .findUser__button:hover{
+  width: 200px;
+  color: RGB(215,215,215);
+  text-decoration: none;
+  text-align: right;
+}
+
+
+.register__button, .register__button:hover, .register__button::after, .register__button::before{
+  padding-top: 20px;
+  text-align: center;
+  color: #12DB64;
+}
