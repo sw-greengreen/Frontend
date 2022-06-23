@@ -34,7 +34,7 @@ function FindUserPage() {
   } 
 
     return (
-      <div className="findPage">
+      <div id="findIDPage">
         <div className="findFrame">
           <figure className="findLogo">
             <img

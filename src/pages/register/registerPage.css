@@ -1,4 +1,4 @@
-.registerPage{
+#registerPage{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +7,7 @@
   padding-bottom: 100px;
 }
 
-.registerFrame{
+#registerPage .registerFrame{
   border-radius: 50px;
   padding: 50px;
   padding-top: 100px;
@@ -18,20 +18,20 @@
   box-shadow: 5px 5px 10px 1px #b2b2b2;
 }
 
-.registerLogo{
+#registerPage .registerLogo{
   margin-bottom: 50px;
 }
 
-.registerForm{
+#registerPage .registerForm{
   display: flex;
   flex-direction: column;
 }
 
-.register__input::placeholder{
+#registerPage .register__input::placeholder{
   color: #cccccc;
 }
 
-.register__input, .userRegister__button {
+#registerPage .register__input, #registerPage .userRegister__button {
   width: 300px;
   height: 50px;
   padding-left: 10px;
@@ -40,7 +40,7 @@
   outline-style: none;
 }
 
-.userRegister__button{
+#registerPage .userRegister__button{
   padding: 0;
   margin-top: 100px;
   background: #12DB64;
@@ -49,29 +49,29 @@
   border-style: none;
 }
 
-.title{
+#registerPage .title{
   text-decoration: dashed;
   font-size:large;
   margin-bottom: 20px;
 }
 
-.wrapper{
+#registerPage .wrapper{
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
 }
-.textWrapper{
+#registerPage .textWrapper{
   display: flex;
   flex-direction: row;
   padding-left: 10px;
   padding-top: 5px;
 }
 
-.requiredText{
+#registerPage .requiredText{
   color: #12DB64;
 }
 
-.description{
+#registerPage .description{
   padding-left: 10px;
   color: #cccccc;
 }

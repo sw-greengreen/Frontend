@@ -42,7 +42,7 @@ function RegisterPage() {
   }
 
   return (
-    <div className="registerPage">
+    <div id="registerPage">
       <div className="registerFrame">
         <figure className="registerLogo">
           <img

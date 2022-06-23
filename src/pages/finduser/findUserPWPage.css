@@ -1,4 +1,4 @@
-.findPage{
+#findPWPage{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +7,7 @@
   padding-bottom: 100px;
 }
 
-.findFrame{
+#findPWPage .findFrame{
   border-radius: 50px;
   padding: 50px;
   background-color: #ffffff;
@@ -17,20 +17,20 @@
   box-shadow: 5px 5px 10px 1px #b2b2b2;
 }
 
-.findMenu{
+#findPWPage .findMenu{
   padding-top: 20px;
   display: flex;
   flex-direction: row;
 }
 
-.findForm{
+#findPWPage .findForm{
   display: flex;
   flex-direction: column;
   background: #ffffff;
   padding-top: 15px;
 }
 
-.activeFind, .inactiveFind{
+#findPWPage .activeFind, #findPWPage .inactiveFind{
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
   padding: 38px;
@@ -42,20 +42,20 @@
   font-weight: bold;
 }
 
-.activeFind:hover, .inactiveFind:hover, .activeFind::after, .activeFind{
+#findPWPage .activeFind:hover, #findPWPage .inactiveFind:hover, #findPWPage .activeFind::after, #findPWPage .activeFind{
   color: #12DB64;
 }
 
-.inactiveFind, .inactiveFind::after{
+#findPWPage .inactiveFind, #findPWPage .inactiveFind::after{
   background: #eaeaea;
   color: #b2b2b2;
 }
 
-.find__input::placeholder{
+#findPWPage .find__input::placeholder{
   color: #cccccc;
 }
 
-.find__input, .find__button {
+#findPWPage .find__input, #findPWPage .find__button {
   width: 300px;
   height: 50px;
   padding-left: 10px;
@@ -64,7 +64,7 @@
   outline-style: none;
 }
 
-.find__button{
+#findPWPage .find__button{
   padding: 0;
   margin-top: 50px;
   background: #12DB64;
@@ -73,18 +73,18 @@
   border-style: none;
 }
 
-.wrapper{
+#findPWPage .wrapper{
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
 }
-.textWrapper{
+#findPWPage .textWrapper{
   display: flex;
   flex-direction: row;
   padding-left: 10px;
   padding-top: 5px;
 }
 
-.requiredText{
+#findPWPage .requiredText{
   color: #12DB64;
 }

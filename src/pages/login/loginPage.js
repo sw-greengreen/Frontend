@@ -36,7 +36,7 @@ function LoginPage() {
       });
   } 
   return (
-    <div className="loginPage">
+    <div id="loginPage">
       <div className="loginFrame">
         <form className="loginForm" onSubmit={(e)=>{onLogin(e)}}>
         {/* <form className="loginForm"> */}
