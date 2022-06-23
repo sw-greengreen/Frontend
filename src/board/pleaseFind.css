@@ -1,31 +1,31 @@
-#mainPage .banner{
+#pleaseFind .banner{
     display: flex;
-    height: 250px;
+    height: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 4px 0px inset !important;
 }
 
-#mainPage .banner-gradient{
+#pleaseFind .banner-gradient{
     width: 60%;
     background: linear-gradient( to right, #FFE26A, #FEBB77 );
 }
 
-#mainPage .banner-text{
+#pleaseFind .banner-text{
     width: 40%;
     padding-top: 2.5%;
     padding-left: 4%;
 }
 
-#mainPage .b-text1{
+#pleaseFind .b-text1{
     font-size: 3.5em;
     font-weight: bold;
     line-height: 50px;
 }
 
-#mainPage .b-text2{
+#pleaseFind .b-text2{
     font-weight: bold;
 }
 
-#mainPage .rankFrame{
+#pleaseFind .rankFrame{
     display: flex;
     padding-left: 5%;
     align-items: center;
@@ -36,62 +36,63 @@
     margin-top: 20px;
 }
 
-#mainPage .rank-title{
+#pleaseFind .rank-title{
     border-left: 1px solid  rgb(204, 204, 204);
     padding-right: 10%;
 }
 
-#mainPage .rank-name{
+#pleaseFind .rank-name{
     padding-right: 3%;
 
 }
 
-#mainPage .rank-change{
+#pleaseFind .rank-change{
     padding-right: 3%;
     color: red;
 }
 
-#mainPage .left-header{
+#pleaseFind .left-header{
     width: 350px;
 }
 
-#mainPage .board-kinds{
+#pleaseFind .board-kinds{
     border: 1px solid #12DB64;
     background-color: #12DB64;
     border-radius: 30px;
     padding:0 20px;
     
 }
-#mainPage .board-kinds span{
+#pleaseFind .board-kinds span{
 
     font-size: 0.8em;
     padding: 0 10px;
     color: white;
 }
 
-#mainPage .rank-point{
+#pleaseFind .rank-point{
     color: #FFE26A;
 }
 
-#mainPage .item-board{
+#pleaseFind .item-board{
     display: flex;
     margin: 0 15%;
     justify-content: space-between;
     margin-top: 4%;
+    
 }
 
-#mainPage .item-board .right-header{
+#pleaseFind .item-board .right-header{
     width: 50%;
     position: relative;
 }
 
-#mainPage .item-board .icon{
+#pleaseFind .item-board .icon{
     position: absolute;
     right: 20px;
     bottom: 10px;
     color: rgb(150, 150, 150);
 }
-#mainPage .item-board input{
+#pleaseFind .item-board input{
     margin-top: 10%;
     width: 100%;
     border: 2px solid #12DB64;
@@ -100,16 +101,16 @@
     padding-left: 40px;
 }
 
-#mainPage .item-board input:focus{
+#pleaseFind .item-board input:focus{
    outline: none;
 }
 
-#mainPage .item-header{
+#pleaseFind .item-header{
     display: flex;
     justify-content: space-between;
 }
 
-#mainPage hr{
+#pleaseFind hr{
     height: 1px;
     border-top: 5px solid black;
     margin-top: 10px;
@@ -117,20 +118,20 @@
 
 
 
-#mainPage .left-header-text{
+#pleaseFind .left-header-text{
     font-weight: bold;
     width: 200px;
     line-height: 25px;
     font-size: 1.5em;
 }
 
-#mainPage .item-list{
+#pleaseFind .item-list{
     margin: 0 15%;
     display: flex;
     margin-top: 2%;
 }
 
-#mainPage .boxFrame{
+#pleaseFind .boxFrame{
     position: relative;
     width: 19%;
     margin-right: 2%;
@@ -212,7 +213,7 @@
     color: rgb(75, 75, 75);
 }
 
-#mainPage .transfer-num{
+#pleaseFind .transfer-num{
     margin: 2% 0;
     display: flex;
     justify-content: center;
