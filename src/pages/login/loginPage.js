@@ -13,6 +13,7 @@ function LoginPage() {
       call("/auth/login", "POST", User).then((response)=>{
           if(response.success){
             window.localStorage.setItem("username", response.result.username);
+            console.log(response)
             console.log("유저네임!!!!"+response.result.username)
               Swal.fire({
                   icon: 'success',

@@ -8,8 +8,18 @@ function Navigation(props) {
   const [modalOpen, setModalOpen] = useState(false);
   const [isUpload, setIsUpload] = useState(false);
   const [isFindIt, setFindIt] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setLogin] = useState(false);
 
+  useEffect(()=>{
+    if(window.localStorage.getItem("username")!==null){
+      setLogin(true);
+    }
+    else{
+      setLogin(false);
+    }
+  },[isLogin])
+
+ 
 
 
   if(window.location.pathname !=="/boardUpload" && window.location.pathname !=="/pleaseFind" && isUpload){
@@ -74,12 +84,12 @@ function Navigation(props) {
               
           </div>
           {
-          isLogin ?
+          window.localStorage.getItem("username")!==null ?
           isUpload ?
           <div className='loginFrame'>
               
           <div className='login-text'>| <span onClick={()=>{navigate("/boardUpload")}}>글쓰기</span> | <span>마이페이지</span> | <span className='alarm' onClick={openModal}>알림</span> | </div>
-          <div className='logout'>
+          <div className='logout' onClick={()=>{window.localStorage.clear();navigate("/")}}>
             로그아웃
           </div>
           
@@ -88,7 +98,7 @@ function Navigation(props) {
           <div className='loginFrame'>
               
           <div className='login-text'>|  <span onClick={()=>{navigate("/findBoardUpload")}}>글쓰기</span> | 마이페이지 | <span className='alarm' onClick={openModal}>알림</span> | </div>
-          <div className='logout'>
+          <div className='logout' onClick={()=>{window.localStorage.clear();navigate("/")}}>
             로그아웃
           </div>
           
@@ -97,14 +107,14 @@ function Navigation(props) {
           <div className='loginFrame'>
               
           <div className='login-text'>| 마이페이지 | <span className='alarm' onClick={openModal}>알림</span> | </div>
-          <div className='logout'>
+          <div className='logout' onClick={()=>{window.localStorage.clear();navigate("/")}}>
             로그아웃
           </div>
           
           </div>
           :
           
-          <div className='loginFrame'>
+          <div className='loginFrame1'>
                 <div className='login-join' onClick={()=>{navigate("/login")}}>로그인/회원가입</div>
               </div> 
              
