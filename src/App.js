@@ -1,9 +1,11 @@
-import MainPage from "./pages/main/mainPage";
+import MainPage from "./pages/main/MainPage";
 import LoginPage from "./pages/login/loginPage";
 import RegisterPage from "./pages/register/registerPage";
+import FindUserIDPage from "./pages/finduser/findUserIDPage";
+import FindUserPWPage from "./pages/finduser/findUserPWPage";
 import Navigation from "./component/navigation";
 import BoardUpload from "./board/boardUpload";
-import BoardDetail from "./board/boardDetail";
+import BoardDetail from "./board/BoardDetail";
 import PleaseFind from "./board/pleaseFind";
 import FindIt from "./board/findIt";
 import FindBoardUpload from "./board/findBoardUpload";
@@ -21,6 +23,8 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/findUser/ID" element={<FindUserIDPage />} />
+          <Route path="/findUser/PW" element={<FindUserPWPage />} />
           <Route path="/boardUpload" element={<BoardUpload />} />
           <Route path="/boardDetail" element={<BoardDetail />} />
           <Route path="/pleaseFind" element={<PleaseFind />} />
