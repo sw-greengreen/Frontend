@@ -1,4 +1,4 @@
-import MainPage from "./pages/main/MainPage";
+import MainPage from "./pages/main/mainPage";
 import LoginPage from "./pages/login/loginPage";
 import RegisterPage from "./pages/register/registerPage";
 import FindUserIDPage from "./pages/finduser/findUserIDPage";
