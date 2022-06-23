@@ -45,8 +45,8 @@ function RegisterPage() {
       <div className="registerFrame">
         <figure className="registerLogo">
           <img
-              src="img/register_logo.png"
-              alt="회원가입 로고 이미지"
+              src="img/logo.png"
+              alt="로고 이미지"
               />
         </figure>
           <form className="registerForm" onSubmit={(e)=>{registerValid(e)}}>
@@ -88,7 +88,7 @@ function RegisterPage() {
             <div class="description">계정 분실 시 본인인증 정보로 사용됩니다.</div>
           </div>
 
-          <button type="submit" class="register__button">회원가입</button>
+          <button type="submit" class="userRegister__button">회원가입</button>
         </form>
       </div>
     </div>

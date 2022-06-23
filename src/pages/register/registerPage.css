@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
 .registerFrame{
@@ -17,6 +18,10 @@
   box-shadow: 5px 5px 10px 1px #b2b2b2;
 }
 
+.registerLogo{
+  margin-bottom: 50px;
+}
+
 .registerForm{
   display: flex;
   flex-direction: column;
@@ -26,8 +31,8 @@
   color: #cccccc;
 }
 
-.register__input, .register__button {
-  width: 350px;
+.register__input, .userRegister__button {
+  width: 300px;
   height: 50px;
   padding-left: 10px;
   margin: 10px;
@@ -35,7 +40,7 @@
   outline-style: none;
 }
 
-.register__button{
+.userRegister__button{
   padding: 0;
   margin-top: 100px;
   background: #12DB64;
