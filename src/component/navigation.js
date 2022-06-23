@@ -60,8 +60,7 @@ function Navigation(props) {
  
           <div className='logoFrame'>
               <div className='logo'>
-                <img onClick={()=>{navigate("/")}} style={{width:"200px"}} src='img/logo.png' alt='logo img'></img>
-                
+                <img onClick={()=>{window.location.replace("/")}} style={{width:"200px"}} src='img/logo.png' alt='logo img'></img>  
               </div>
               {
               isUpload ? 
