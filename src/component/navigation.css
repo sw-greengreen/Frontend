@@ -7,11 +7,20 @@
 
 #navigation .logoFrame{
     display: flex;
+    position: relative;
+}
+
+#navigation .logo{
+    position: absolute;
+    top: 10%;
+    cursor: pointer;
 }
 
 #navigation .find-please{
     display: flex;
     align-items: center;
+    margin-left: 45%;
+    width: 500px;
 }
 
 #navigation .find-please span{

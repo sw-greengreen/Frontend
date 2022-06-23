@@ -24,21 +24,7 @@ function findBoardUpload() {
         <div className='board-hash'>
               <h5>#해시태그</h5>
               <div className='board-hashtags'>
-                <div className='board-hashtag'>#멀티태그</div>
-                <div className='board-hashtag'>#멀티태그</div>
-                <div className='board-hashtag-empty'></div>
-                <div className='board-hashtag-empty'></div>
-                <div className='board-hashtag-empty'></div>
-                <br/>
-                
-                </div>
-                <div className='board-hashtags last-tags'>
-                <div className='board-hashtag'>#멀티태그</div>
-                <div className='board-hashtag'>#멀티태그</div>
-                <div className='board-hashtag-empty'></div>
-                <div className='board-hashtag-empty'></div>
-                <div className='board-hashtag-empty'></div>
-                <br/>
+                <input className='board-hashtag' type="text" placeholder='#해시태그 작성 후 Enter'></input>
                 
                 </div>
               <hr></hr>
