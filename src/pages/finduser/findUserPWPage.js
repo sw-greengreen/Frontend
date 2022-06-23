@@ -8,10 +8,14 @@ function FindUserPage() {
       <div className="findFrame">
         <figure className="findLogo">
           <img
-              src="img/find_logo.png"
+              src="img/logo.png"
               alt="로고 이미지"
-              />
+          />
         </figure>
+        <div class="findMenu">
+          <a class="inactiveFind" href="/finduserID">아이디 찾기</a>
+          <a class="activeFind" href="/finduserPW">비밀번호 찾기</a>
+        </div>
 
         {/* <form className="findForm" onSubmit={(e)=>{onfind(e)}}> */}
         <form className="findForm">

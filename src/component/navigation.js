@@ -15,12 +15,15 @@ function Navigation(props) {
     setIsUpload(false);
   }
 
+  if(window.location.pathname !=="/findIt" && window.location.pathname !=="/findBoardUpload" && isFindIt){
+    setFindIt(false);
+  }
   useEffect(() => {
     if(window.location.pathname ==="/boardUpload" || window.location.pathname ==="/pleaseFind" && !isUpload){
       setIsUpload(true);
     }
 
-    if(window.location.pathname ==="/findIt" && !isFindIt){
+    if(window.location.pathname ==="/findIt"  || window.location.pathname ==="/findBoardUpload" && !isFindIt){
       setFindIt(true);
     }
     document.addEventListener('click', clickModalOutside);
@@ -46,7 +49,7 @@ function Navigation(props) {
  
           <div className='logoFrame'>
               <div className='logo'>
-                <img alt='logo img'></img>
+                <img onClick={()=>{navigate("/")}} style={{width:"200px"}} src='img/logo.png' alt='logo img'></img>
                 
               </div>
               {isUpload ? 
