@@ -26,7 +26,7 @@
   color: #cccccc;
 }
 
-.register__input, .register__button {
+.register__input, .userRegister__button {
   width: 350px;
   height: 50px;
   padding-left: 10px;
@@ -35,7 +35,7 @@
   outline-style: none;
 }
 
-.register__button{
+.userRegister__button{
   padding: 0;
   margin-top: 100px;
   background: #12DB64;
