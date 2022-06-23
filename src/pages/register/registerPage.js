@@ -75,7 +75,7 @@ function RegisterPage() {
               <div class="text">비밀번호</div>
               <div class="requiredText">*</div>
             </div>
-            <input type={"password"} class="register__input" autoComplete="current-password" placeholder="숫자, 영문, 최소 8자" pattern="^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,50}$" required onChange={(e) =>{setUser({...User, "password" : e.target.value})}}></input>
+            <input type={"password"} class="register__input" autoComplete="current-password" placeholder="영문, 숫자, 특수문자 모두 포함, 최소 8자" pattern="^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+])(?!.*[^a-zA-z0-9$`~!@$!%*#^?&\\(\\)\-_=+]).{8,50}$" required onChange={(e) =>{setUser({...User, "password" : e.target.value})}}></input>
             <input type={"password"} class="register__input" autoComplete="current-password-check" placeholder="비밀번호 확인" required onChange={(e) =>{setConfirmPW(e.target.value);}}></input>
           </div>
 

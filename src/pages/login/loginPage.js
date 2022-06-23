@@ -48,7 +48,7 @@ function LoginPage() {
           <div class="loginSettings">
             <div className="autoLoginFrame"><label htmlFor="autoLogin"><input id="autoLogin" type={"checkbox"}></input> &nbsp; 자동 로그인</label></div>
 
-            <Link to="/findUser/id" class="findUser__button">아이디/비밀번호 찾기</Link>
+            <Link to="/findUserID" class="findUser__button">아이디/비밀번호 찾기</Link>
           </div>
           <Link to="/register" class="register__button">회원가입</Link>
         </form>
