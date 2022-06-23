@@ -12,6 +12,8 @@ function LoginPage() {
       e.preventDefault();
       call("/auth/login", "POST", User).then((response)=>{
           if(response.success){
+            window.localStorage.setItem("username", response.result.username);
+            console.log("유저네임!!!!"+response.result.username)
               Swal.fire({
                   icon: 'success',
                   title: '로그인에 성공하셨습니다.',
