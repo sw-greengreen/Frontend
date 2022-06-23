@@ -1,0 +1,241 @@
+#myPage{
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+#myPage .divider{
+  border-top: 2px solid #cccccc;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+#myPage .userFrame{
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 10px 1px #b2b2b2;
+  padding: 30px;
+  margin: 0 15%;
+}
+
+#myPage .userFrame, #myPage .title{
+  display: flex;
+  flex-direction: row;
+}
+
+#myPage .title{
+  margin: 0;
+}
+
+#myPage .userPic{
+  width: 150px;
+  margin-right: 50px;
+}
+
+#myPage .editUser{
+  padding-left: 200px;
+  padding-top: 15px;
+}
+
+#myPage .userInfo{
+  display: flex;
+  flex-direction: column;
+}
+
+#myPage .user{
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+#myPage .innerText{
+  display: flex;
+  flex-direction: row;
+}
+
+#myPage .innerText > p {
+  padding-right: 100px;
+  padding-bottom: 0px;
+}
+
+#myPage .findMenu{
+  padding-top: 100px;
+  padding-bottom: 50px;
+  margin: 0 15%;
+}
+
+#myPage .activeFind, #myPage .inactiveFind{
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 38px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin: 2px;
+  box-shadow: 2px -5px 10px -5px #b2b2b2;
+  text-decoration: none;
+}
+
+#myPage .activeFind:hover, #myPage .inactiveFind:hover, #myPage .activeFind::after, #myPage .activeFind{
+  color: black;
+}
+
+#myPage .inactiveFind, #myPage .inactiveFind::after{
+  background: #eaeaea;
+  color: #b2b2b2;
+}
+
+#myPage .board-kinds{
+  width: 350px;
+  border: 1px solid #12DB64;
+  background-color: #12DB64;
+  border-radius: 30px;
+  padding:0 20px;
+  margin: 0 15%;
+}
+
+#myPage .board-kinds span{
+  font-size: 0.8em;
+  padding: 0 10px;
+  color: white;
+}
+
+#myPage .item-board{
+  display: flex;
+  margin: 0 15%;
+  justify-content: space-between;
+  margin-top: 4%;
+}
+
+#myPage .item-board .right-header{
+  width: 50%;
+  position: relative;
+}
+
+#myPage .item-board .icon{
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: rgb(150, 150, 150);
+}
+#myPage .item-board input{
+  margin-top: 10%;
+  width: 100%;
+  border: 2px solid #12DB64;
+  height: 40px;
+  border-radius: 30px;
+  padding-left: 40px;
+}
+
+#myPage .item-board input:focus{
+ outline: none;
+}
+
+#myPage .item-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+#myPage hr{
+  height: 1px;
+  border-top: 5px solid black;
+  margin-top: 10px;
+}
+
+#myPage .item-list{
+  margin: 0 15%;
+  display: flex;
+  margin-top: 2%;
+}
+
+#myPage .boxFrame{
+  position: relative;
+  width: 19%;
+  margin-right: 2%;
+  height: 260px;
+  background-color: rgb(229, 229, 229);
+  border-radius: 10px;
+  padding: 1%;
+}
+
+.boxFrame:last-child{
+  margin-right: 0%;
+}
+
+.boxFrame h5{
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.boxFrame hr{
+  margin: 0;
+}
+
+.pictureFrame{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  height: 150px;
+  border-radius: 10px;
+  margin-bottom: 4%;
+  overflow: hidden;
+}
+.pictureFrame img{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.boxFrame p{
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.border-time{
+  color: rgb(150, 150, 150);
+}
+
+.board-tag{
+  margin-top: 5px;
+  display: flex;
+  font-size: 0.8em;
+}
+
+.board-tag .solution{
+  border: 1px solid #12DB64;
+  background-color: #12DB64;
+  padding: 0 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.board-tag .unresolved{
+  border: 1px solid rgb(100, 100, 100);
+  background-color: rgb(100, 100, 100);
+  padding: 0 10px;
+  border-radius: 5px;
+  color: white;
+}
+.board-tag .hashtag{
+  margin-left: 15px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 0 8px;
+  color: rgb(75, 75, 75);
+}
+
+#myPage .transfer-num{
+  margin: 2% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  letter-spacing: 10px;
+  margin-bottom: 3%;
+}
