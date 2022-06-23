@@ -1,7 +1,9 @@
 import './boardDetail.css';
 import Modal  from './Modal';
 import React, { useEffect, useState} from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios'
+import { call } from '../hooks/usefetch';
 
 function BoardDetail(props) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -9,6 +11,11 @@ function BoardDetail(props) {
   const [commentList,SetCommentList] = useState([]);
   const [imageUrl,setImageUrl] = useState("");
   const [postWriter,setPostWriter] = useState("");
+  const [content, setContent] = useState("")
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const boardNum = location.state;
 
   useEffect(() => {
     document.addEventListener('click', clickModalOutside);
@@ -28,13 +35,28 @@ function BoardDetail(props) {
     }
   };
 
+  const insertComment = async()=>{
+    try{
+      await call("/post/"+boardNum+"/comment", "POST", {"content":content, "postId":boardNum, "writer":postWriter})
+      .then((res)=>{
+        
+        }
+        
+        )
+    } catch (e){
+      console.log(e);
+    }
+
+  }
+
+
     //게시물 조회
     useEffect(() => {
       async function getData() {
         try {
           const response = await axios
             .get(
-              `http://localhost:8080/api/v1/post/1`
+              `http://localhost:8080/api/v1/post/`+boardNum
             )
             .then((response) => {
               console.log("난 게시물 data");
@@ -67,7 +89,7 @@ function BoardDetail(props) {
       try {
         const response = await axios
           .get(
-            `http://localhost:8080/post/1/comment`
+            `http://localhost:8080/post/`+boardNum+`/comment`
           )
           .then((response) => {
             if (response.data["success"] == true) {
@@ -154,9 +176,11 @@ function BoardDetail(props) {
                 )
               }
             </table>
-            <input type="text"></input>
-            <button>등록</button>
+            <input type="text" onChange={(e)=>{setContent(e.target.value)}}></input>
+            <button onClick={insertComment}>등록</button>
           </div>
+
+
           <Modal open={modalOpen} close={closeModal} header="Modal heading">
                 <main> {props.children} </main>
               </Modal>
