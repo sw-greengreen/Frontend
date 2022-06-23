@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom"
 function FindBoardUpload() {
   const navigate = useNavigate();
   const [post, setPost] = new useState({"username":"jungeun919", "title":"", "content":"", "photo" : "", "hashtag":"", "postType":"DISCOVERY", "resolvingStatus":"WAITING", "isAnontymous":""})
+
   const [imgBase64, setImgBase64] = useState(""); // 파일 base64
   const [imgFile, setImgFile] = useState(null);	//파일	
 
@@ -68,6 +69,7 @@ const handleChangeFile = (event) => {
         })
       }
       })
+
   }
     return (
       <div id="findBoardUpload">
