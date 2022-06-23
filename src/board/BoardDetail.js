@@ -6,9 +6,9 @@ import axios from 'axios'
 function BoardDetail(props) {
   const [modalOpen, setModalOpen] = useState(false);
   const [postData, setPostData] = useState([]);
-  const [commentData, setCommentData] = useState([]);
+  const [commentList,SetCommentList] = useState([]);
   const [imageUrl,setImageUrl] = useState("");
-  const [username,setUsername] = useState("");
+  const [postWriter,setPostWriter] = useState("");
 
   useEffect(() => {
     document.addEventListener('click', clickModalOutside);
@@ -43,9 +43,7 @@ function BoardDetail(props) {
                 console.log(JSON.stringify(response.data.result));
                 const data = response.data.result;
                 setData(data);
-                setUsername(response.data.result.user["username"]);
-                setCommentData(response.data.result.comments);
-                console.log("댓글 데이터 : "+commentData);
+                setPostWriter(response.data.result.user["username"]);
               }
             })
             .catch(function (error) {
@@ -60,8 +58,38 @@ function BoardDetail(props) {
         }
       }
       getData();
-    }, [postData,imageUrl]);
+    }, [imageUrl]);
 
+
+  // 댓글 조회
+  useEffect(() => {
+    async function getData() {
+      try {
+        const response = await axios
+          .get(
+            `http://localhost:8080/post/1/comment`
+          )
+          .then((response) => {
+            if (response.data["success"] == true) {
+              const data = response.data["result"];
+              SetCommentList(data);
+              console.log("난 댓글 data");
+              console.log(data);
+            }
+          })
+          .catch(function (error) {
+            alert("댓글을 가져오지 못 했습니다.");
+            console.log(error);
+            throw error;
+          });
+      } catch (error) {
+        alert("댓글을 가져오지 못 했습니다.");
+        console.log(error);
+        throw error;
+      }
+    }
+    getData();
+  }, [SetCommentList]);
 
   const openModal = () => {
     setModalOpen(true);
@@ -86,7 +114,7 @@ function BoardDetail(props) {
               <hr></hr>
               <div className='item-content-detail'>
                 <div className='item-title'>
-                  <span>{username}</span>
+                  <span>{postWriter}</span>
                   <span>{postData.createdAt}</span>
                   <span>120</span>
                   <span>200 p</span>
@@ -106,18 +134,25 @@ function BoardDetail(props) {
             댓글
             </p>
             <table>
-              <tr>
-                <td>
-                  <span>지영84 2022.06.23 15:03</span>
-                  <span>대댓글 디엠 수정</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                <span>1920 2022.06.23 14:03</span>
-                <span>대댓글 디엠 수정</span>
-                </td>
-              </tr>
+              {
+                commentList.length <= 0 ? (
+                  <tr key={"nothing"}>
+                    <td colSpan="5">등록된 댓글이 없습니다.</td>
+                  </tr>
+                ):(
+                  commentList.map((comment,i) => (
+                    <tr>
+                      <td>
+                        <span>{comment.username}</span>
+                        <span>대댓글 디엠 수정</span>
+                    </td>
+                    <td> 
+                      <span>{comment.content}</span>
+                    </td>
+                  </tr>
+                  ))
+                )
+              }
             </table>
             <input type="text"></input>
             <button>등록</button>
