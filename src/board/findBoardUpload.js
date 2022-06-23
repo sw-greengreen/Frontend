@@ -2,10 +2,13 @@ import axios from 'axios';
 import { useState } from 'react';
 import { call } from '../hooks/usefetch';
 import './findBoardUpload.css';
+import Swal from "sweetalert2"
+import { useNavigate } from "react-router-dom"
 
 function FindBoardUpload() {
+  const navigate = useNavigate();
+  const [post, setPost] = new useState({"username":"jungeun919", "title":"", "content":"", "photo" : "", "hashtag":"", "postType":"DISCOVERY", "resolvingStatus":"WAITING", "isAnontymous":""})
 
-  const [post, setPost] = new useState({"username":"username1", "title":"", "content":"", "photo" : "", "hashtag":"", "postType":"DISCOVERY", "resolvingStatus":"WAITING", "isAnontymous":""})
   const [imgBase64, setImgBase64] = useState(""); // 파일 base64
   const [imgFile, setImgFile] = useState(null);	//파일	
 
@@ -29,7 +32,6 @@ const handleChangeFile = (event) => {
 
   const handleClick = () =>{
     const formdata = new FormData();
-    console.log(imgFile);
     formdata.append("file", imgFile);
 
     const config = {
@@ -37,15 +39,36 @@ const handleChangeFile = (event) => {
         'content-type':'multipart/form-data',
       },
     };
-    axios.post("http://localhost:8080/api/v1/file", formdata, config).then((res) => {console.log(res)});
+    axios.post("http://localhost:8080/api/v1/file", formdata, config).then((res) => {
+      if(res.data.success){
+        setPost({...post, "photo": res.data.result});
+        submitBtn(res.data.result);
+      }
+    });
   }
 
-  const submitBtn = ()=>{
+  const submitBtn = (photo)=>{
 
-     call("/api/v1/post", "POST", post).then((response)=>{
+     call("/api/v1/post", "POST", {...post, "photo": photo}).then((response)=>{
       
-      console.log(response)})
-      console.log(post);
+      if(response.success){
+        Swal.fire({
+          icon: 'success',
+          title: '게시글 작성에 성공하셨습니다.',
+        })
+        .then((result)=>{
+            if(result.isConfirmed){
+                navigate("/")
+            }
+        })
+      }
+      else{
+        Swal.fire({
+          icon: 'error',
+          title: '게시글 작성에 실패하셨습니다.',
+        })
+      }
+      })
 
   }
     return (
