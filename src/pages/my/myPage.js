@@ -11,6 +11,7 @@ import { call } from "../../hooks/usefetch"
 function MyPage() {
   const navigate = useNavigate();
   const userid = window.localStorage.getItem("id");
+  const current_username = window.localStorage.getItem("username");
 
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
@@ -22,6 +23,7 @@ function MyPage() {
   useEffect(() => {
     async function getUserInfo(){
       call(`/auth/${userid}`, "GET").then((response)=>{
+        console.log(response);
         if(response.success){
           setName(response.result.name);
           setUsername(response.result.username);
@@ -39,10 +41,10 @@ function MyPage() {
         <img src='/img/user.png' alt='사용자 프로필' className="userPic"></img>
         <div className="userInfo">
           <div className="title">
-            <p className="user">{ name }</p>
+            <p className="user">{ current_username }</p>
             <p className="editUser">회원정보 수정</p>
           </div>
-          <div className="innerText"><p>칭호 &nbsp;&nbsp; </p> <p>{ achievement }</p></div>
+          <div className="innerText"><p>등급 &nbsp;&nbsp; </p> <p>{ achievement }</p></div>
           <div className="divider"/>
           <div className="innerText"><p>아이디 &nbsp;&nbsp; </p> <p>{ username }</p></div>
           <div className="innerText"><p>비밀번호</p> <p>********</p></div>

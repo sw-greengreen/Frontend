@@ -44,7 +44,7 @@ function PleaseFind() {
           <h5>{postList[i].id+". "}{postList[i].title}</h5>
         </div>
         <hr/>
-        <p><span className='border-writer'>{postList[i].user.name}</span><span className='border-time'>24분 전</span></p>
+        <p><span className='border-writer'>{postList[i].user.username}</span><span className='border-time'>24분 전</span></p>
         <div className='board-tag'>
           {postList[i].resolvingStatus==="WAITING" ? 
           <div className='unresolved'>

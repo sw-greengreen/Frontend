@@ -126,6 +126,9 @@ function BoardDetail(props) {
     }
   };
   
+  const resolve = () => {
+
+  };
     return (
       <div id="boardDetail">
           <div className='boardFrame'>
@@ -148,7 +151,9 @@ function BoardDetail(props) {
                 </div>
                 <button  onClick={openModal}>디엠하기</button>
               </div>
-            </div>
+              <br/>
+              <button  onClick={resolve}>{postData.resolvingStatus=="WAITING"?("미해결"):("해결")}</button>
+        </div>
    
           </div>
           

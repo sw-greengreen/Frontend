@@ -82,7 +82,7 @@ function MainPage() {
             <h5>{postList[i].id+". "}{postList[i].title}</h5>
           </div>
           <hr/>
-          <p><span className='border-writer'>{postList[i].user["name"]}</span><span className='border-time'>24분 전</span></p>
+          <p><span className='border-writer'>{postList[i].user["username"]}</span><span className='border-time'>{postList[i].updatedAt.substr(0.5)}</span></p>
           <div className='board-tag'>
             {postList[i].resolvingStatus==="WAITING" ? 
             <div className='unresolved'>
@@ -141,7 +141,7 @@ function MainPage() {
               <br/>
               <br/>
               <span className='b-text2'>
-                학교 내에서 분실물을 등록하거나 조회하여 찾을 수 있도록 도와주는 커뮤니티 사이트
+                학교 내에서 분실물을 등록하거나 조회하여 <br/>찾을 수 있도록 도와주는 커뮤니티 사이트
               </span>
           </div>
 

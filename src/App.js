@@ -9,7 +9,7 @@ import BoardDetail from "./board/BoardDetail";
 import PleaseFind from "./board/pleaseFind";
 import FindIt from "./board/findIt";
 import FindBoardUpload from "./board/findBoardUpload";
-
+import MyPage from "./pages/my/myPage"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 
@@ -30,6 +30,7 @@ function App() {
           <Route path="/pleaseFind" element={<PleaseFind />} />
           <Route path="/findIt" element={<FindIt />} />
           <Route path="/findBoardUpload" element={<FindBoardUpload />} />
+          <Route path="/MyPage" element={<MyPage />}/>
         </Routes>
       </Router>
        {/* <Footer /> */}

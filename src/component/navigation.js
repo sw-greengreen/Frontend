@@ -87,7 +87,7 @@ function Navigation(props) {
           isUpload ?
           <div className='loginFrame'>
               
-          <div className='login-text'>| <span onClick={()=>{navigate("/boardUpload")}}>글쓰기</span> | <span>마이페이지</span> | <span className='alarm' onClick={openModal}>알림</span> | </div>
+          <div className='login-text'>| <span onClick={()=>{navigate("/boardUpload")}}>글쓰기</span> | <span onClick={()=>{navigate("/MyPage")}}>마이페이지</span> | <span className='alarm' onClick={openModal}>알림</span> | </div>
           <div className='logout' onClick={()=>{window.localStorage.clear();navigate("/")}}>
             로그아웃
           </div>
@@ -96,7 +96,7 @@ function Navigation(props) {
           : isFindIt? 
           <div className='loginFrame'>
               
-          <div className='login-text'>|  <span onClick={()=>{navigate("/findBoardUpload")}}>글쓰기</span> | 마이페이지 | <span className='alarm' onClick={openModal}>알림</span> | </div>
+          <div className='login-text'>|  <span onClick={()=>{navigate("/findBoardUpload")}}>글쓰기</span> | <span onClick={()=>{navigate("/MyPage")}}>마이페이지</span>  | <span className='alarm' onClick={openModal}>알림</span> | </div>
           <div className='logout' onClick={()=>{window.localStorage.clear();navigate("/")}}>
             로그아웃
           </div>
@@ -105,7 +105,7 @@ function Navigation(props) {
           :
           <div className='loginFrame'>
               
-          <div className='login-text'>| 마이페이지 | <span className='alarm' onClick={openModal}>알림</span> | </div>
+          <div className='login-text'>| <span onClick={()=>{navigate("/MyPage")}}>마이페이지</span>  | <span className='alarm' onClick={openModal}>알림</span> | </div>
           <div className='logout' onClick={()=>{window.localStorage.clear();navigate("/")}}>
             로그아웃
           </div>

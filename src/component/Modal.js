@@ -34,10 +34,10 @@ const Modal = (props) => {
 
             </div>
             <div className='alarm-contents'>
-              <div className='alarm-system'><span>1920님이 댓글을 남겼습니다.&nbsp;&nbsp;&nbsp; </span> <span>5분전</span></div>
+              <div className='alarm-system'><span>jeomxon님이 댓글을 남겼습니다.&nbsp;&nbsp;&nbsp; </span> <span>5분전</span></div>
               <div className='alarm-content'>
-                <span className='alarm-title'>회색 가죽지갑 찾아가세요 </span><br/>
-                <span className='alarm-text'>디엠 확인해주세요!!</span>
+                <span className='alarm-title'>ㅠㅠ </span><br/>
+                <span className='alarm-text'>안타깝네요</span>
               </div>
               
             </div>
