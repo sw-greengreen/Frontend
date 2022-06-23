@@ -26,6 +26,7 @@ function boardUpload() {
               <div className='board-hashtags'>
                 <input className='board-hashtag' type="text" placeholder='#해시태그 작성 후 Enter'></input>
                 
+
                 </div>
               <hr></hr>
               <div>
