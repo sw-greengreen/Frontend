@@ -40,7 +40,7 @@
 }
 
 label{
-  color: RGB(215,215,215);
+  color: #cccccc;
 }
 
 .loginSettings{
@@ -51,7 +51,7 @@ label{
 
 .findUser__button, .findUser__button:hover{
   width: 200px;
-  color: RGB(215,215,215);
+  color: #cccccc;
   text-decoration: none;
   text-align: right;
 }
