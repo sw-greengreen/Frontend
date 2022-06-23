@@ -12,21 +12,35 @@ const Modal = (props) => {
       {open ? (
         <section>
           <h2>
-            <BsListUl/> <span className='dm-user'>1920님</span>
+            <span className='dm-user'>알림</span>
             <hr/>
           </h2>
-          <div className='dmFrame'>
-            <input type="text" placeholder='메세지를 작성해주세요'></input>
-            <div className='me'>버스 정류장 어떠세요?</div>
-            <div className='me'>아닙니다!!</div>
+          <div className='alarm-kind'>포인트 | 댓글 | 디엠</div>
+          <div className='alarm-frame first'>
+            <div className='circle-box'>
 
-            
-            <div className='you'>늦게봐서 죄송합니다.....</div>
-            <div className='you'>지갑 주인입니다ㅠㅠ 어디서 받으면 좋을까요?</div>
-            
-            <div className='send-time'>16:42</div>
+            </div>
+            <div className='alarm-contents'>
+              <div className='alarm-system'><span>1920님이 댓글을 남겼습니다.&nbsp;&nbsp;&nbsp; </span> <span>5분전</span></div>
+              <div className='alarm-content'>
+                <span className='alarm-title'>회색 가죽지갑 찾아가세요 </span><br/>
+                <span className='alarm-text'>디엠 확인해주세요!!</span>
+              </div>
+              
+            </div>
+          </div>
+          <div className='alarm-frame'>
+            <div className='circle-box'>
 
-            <div className='send-day'>2022.06.23</div>
+            </div>
+            <div className='alarm-contents'>
+              <div className='alarm-system'><span>1920님이 댓글을 남겼습니다.&nbsp;&nbsp;&nbsp; </span> <span>5분전</span></div>
+              <div className='alarm-content'>
+                <span className='alarm-title'>회색 가죽지갑 찾아가세요 </span><br/>
+                <span className='alarm-text'>디엠 확인해주세요!!</span>
+              </div>
+              
+            </div>
           </div>
         </section>
       ) : null}
