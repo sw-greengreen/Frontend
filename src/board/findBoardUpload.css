@@ -1,0 +1,162 @@
+#findBoardUpload{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 4px 0px inset !important;
+
+}
+
+#findBoardUpload .boardFrame{
+    margin: 0 15%;
+    padding-top: 5%;
+}
+
+#findBoardUpload .boardFrame span:last-child{
+    color: #12DB64;
+}
+
+#findBoardUpload .board-title h5{
+    font-weight: bold;
+    margin-right: 5%;
+}
+
+#findBoardUpload .board-title p{
+    color: #12DB64;
+}
+
+#findBoardUpload .board-title{
+    margin-top: 4%;
+    display: flex;
+}
+
+#findBoardUpload hr{
+    height: 4px;
+    margin: 0;
+    
+}
+
+
+#findBoardUpload .board-body{
+    margin: 0 15%;
+    padding-top: 2%;
+    display: flex;
+}
+
+#findBoardUpload .picture-frame{
+    position: relative;
+    width: 150px;
+    background-color: rgb(229, 229, 229);
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 4%;
+    overflow: hidden;
+}
+#findBoardUpload .picture-frame img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#findBoardUpload .board-hash{
+    margin: 0 15%;
+}
+
+#findBoardUpload .board-hash h5{
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 15%;
+}
+
+
+
+#findBoardUpload .board-hashtags{
+    margin-left: 15%;
+    display: flex;
+    margin-bottom: 1%;
+}
+
+
+
+#findBoardUpload .board-hashtag{
+    border: 1px solid rgb(229, 229, 229);
+    background-color: rgb(229, 229, 229);
+    border-radius: 20px;
+    margin-right: 10px;
+    padding: 0 20px;
+    width: 60%;
+    height: 40px;
+    padding-left: 40px;
+}
+
+#findBoardUpload .board-hashtag-empty{
+    border: 1px solid rgb(229, 229, 229);
+    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
+    margin-right: 10px;
+    width: 150px;
+}
+
+#findBoardUpload .last-tags{
+    margin-bottom: 3%;
+}
+
+#findBoardUpload .title{
+    margin-top: 3%;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 0;
+}
+
+#findBoardUpload .title input{
+height: 25px;
+width: 80%;
+padding: 10px;
+border: 1px solid rgb(201, 201, 201);
+box-shadow: rgba(0, 0, 0, 0.15) 5px 5.95px 5.95px 2.6px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+
+#findBoardUpload .title input::placeholder{
+    color: rgb(199, 199, 199);
+}
+
+#findBoardUpload .content textarea{
+    width: 80%;
+    height: 150px;
+    padding-left: 10px;
+    border: 1px solid rgb(199, 199, 199);
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 5.95px 5.95px 2.6px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+
+#findBoardUpload .content textarea::placeholder{
+    color: rgb(199, 199, 199);
+}
+
+#findBoardUpload .content{
+    margin-top: 2%;
+    font-weight: bold;
+    display: flex;
+    font-size: 1.2em;
+
+}
+
+#findBoardUpload button{
+    float: right;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 10%;
+    background-color: #12DB64;
+    border:1px solid #12DB64;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.2em;
+    margin-right: 10px;
+    height: 40px;
+}
+
+#image {
+    margin-left: 22.5%;
+    margin-bottom: 1%;
+    margin-top: 0;
+}

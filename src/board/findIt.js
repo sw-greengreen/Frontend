@@ -1,46 +1,22 @@
-import './MainPage.css';
+import './findIt.css';
 import { BsFillCaretUpFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
 import {BsCaretLeft} from "react-icons/bs";
 import {BsCaretRight} from "react-icons/bs";
 import {BsChevronLeft} from "react-icons/bs";
 import {BsChevronRight} from "react-icons/bs";
-import { useNavigate} from "react-router-dom";
-function MainPage() {
-  const navigate = useNavigate();
+function findIt() {
   
-
     return (
-      <div id="mainPage">
+      <div id="findIt">
         <div className="banner">
-          <div className="banner-gradient">
-
-          </div>
-
-          <div className="banner-text">
-              <span className='b-text1'>FIND <br/>
-              TOGETHER</span>
-              <br/>
-              <br/>
-              <span className='b-text2'>
-                학교 내에서 분실물을 등록하거나 조회하여 찾을 수 있도록 도와주는 커뮤니티 사이트
-              </span>
-          </div>
 
         </div>
-
-        <div className='rankFrame'>
-          <span className='rank-title'>&nbsp;실시간 랭킹</span>
-          <span className='rank-name'>1등:폴로렌12</span>
-          <span className='rank-change'><BsFillCaretUpFill/>14</span>
-          <span className='rank-point'>12,457p</span>
-        </div>
-
         <div className='item-board'>
           <div className='left-header'>
             <div className='left-header-text'>
               FIND<br/>
-              TOGETHER
+              IT
               <hr/>
             </div>
             <div className='board-kinds'>
@@ -56,7 +32,7 @@ function MainPage() {
           </div>
         </div>
         <div className='item-list'>
-            <div className='boxFrame' onClick={()=>{navigate("/boardDetail")}}>
+            <div className='boxFrame'>
               <div className='pictureFrame'>
                 <img src='/img/test_img.jpg'></img>
               </div>
@@ -74,7 +50,7 @@ function MainPage() {
                 </div>
               </div>
             </div>
-            <div className='boxFrame'  onClick={()=>{navigate("/boardDetail")}}>
+            <div className='boxFrame'>
               <div className='pictureFrame'>
                 <img src='/img/test_img.jpg'></img>
               </div>
@@ -144,68 +120,6 @@ function MainPage() {
             </div>
         </div>
         <div className='item-list'>
-        <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-        </div>
-        <div className='item-list'>
-        <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>  
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
             
         </div>
         <div className='transfer-num'>
@@ -220,4 +134,4 @@ function MainPage() {
     );
   }
   
-  export default MainPage;
+  export default findIt;

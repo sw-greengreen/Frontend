@@ -1,0 +1,90 @@
+.findPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+.findFrame{
+  border-radius: 50px;
+  padding: 50px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 10px 1px #b2b2b2;
+}
+
+.findMenu{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.findForm{
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  padding-top: 15px;
+}
+
+.activeFind, .inactiveFind{
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  padding: 38px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin: 2px;
+  box-shadow: 2px -5px 10px -5px #b2b2b2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.activeFind:hover, .inactiveFind:hover, .activeFind::after, .activeFind{
+  color: #12DB64;
+}
+
+.inactiveFind, .inactiveFind::after{
+  background: #eaeaea;
+  color: #b2b2b2;
+}
+
+.find__input::placeholder{
+  color: #cccccc;
+}
+
+.find__input, .find__button {
+  width: 300px;
+  height: 50px;
+  padding-left: 10px;
+  margin: 10px;
+  margin-top: 0;
+  outline-style: none;
+}
+
+.find__button{
+  padding: 0;
+  margin-top: 50px;
+  background: #12DB64;
+  color: #ffffff;
+  font-weight: bold;
+  border-style: none;
+}
+
+.wrapper{
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.textWrapper{
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.requiredText{
+  color: #12DB64;
+}
