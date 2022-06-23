@@ -1,4 +1,4 @@
-import './MainPage.css';
+import './mainPage.css';
 import { BsFillCaretUpFill } from "react-icons/bs";
 import { BsSearch } from "react-icons/bs";
 import {BsCaretLeft} from "react-icons/bs";
