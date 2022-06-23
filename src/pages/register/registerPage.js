@@ -45,8 +45,8 @@ function RegisterPage() {
       <div className="registerFrame">
         <figure className="registerLogo">
           <img
-              src="img/register_logo.png"
-              alt="회원가입 로고 이미지"
+              src="img/logo.png"
+              alt="로고 이미지"
               />
         </figure>
           <form className="registerForm" onSubmit={(e)=>{registerValid(e)}}>
