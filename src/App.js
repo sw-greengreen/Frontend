@@ -23,8 +23,8 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route path="/findUser/ID" element={<FindUserIDPage />} />
-          <Route path="/findUser/PW" element={<FindUserPWPage />} />
+          <Route path="/findUserID" element={<FindUserIDPage />} />
+          <Route path="/findUserPW" element={<FindUserPWPage />} />
           <Route path="/boardUpload" element={<BoardUpload />} />
           <Route path="/boardDetail" element={<BoardDetail />} />
           <Route path="/pleaseFind" element={<PleaseFind />} />
