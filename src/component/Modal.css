@@ -26,78 +26,95 @@
     height: 100%;
     overflow: hidden;
     padding-top: 5%;
-    padding-left: 2%;
    
   }
 
   .modal > section hr{
     height: 3px;
     background-color: black;
-    margin-bottom: 50px;
+    margin-bottom: 10%;
+    
   }
 
+  .modal > section .alarm-kind{
+    margin-left: 2%;
+    border: 1px solid #12DB64;
+    background-color:  #12DB64;
+    width: 50%;
+    border-radius: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+    .modal > section .first {
+    margin-top: 8%;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+
+  .modal > section .circle-box {
+    width: 50px;
+    height: 50px; 
+    border-radius: 70%;
+    overflow: hidden;
+    background-color: gray;
+    border:1px solid rgb(199, 199, 199);
+    margin-right: 5%;
+    
+}
+
+.modal > section .profile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.modal > section .alarm-content{
+    border-left: 1px solid rgb(201, 201, 201);
+    padding-left: 5%;
+    line-height: 17px;
+}
+.modal > section  .alarm-system {
+    margin-bottom: 5px;
+}
+
+.modal > section  .alarm-system span:first-child{
+    font-weight: bold;
+    
+}
+
+.modal > section  .alarm-system span:last-child{
+    color: #999;
+    font-size: 0.8em;
+    margin-left: 0%;
+}
+
+  .modal > section .alarm-frame{
+    height: 100px;
+    border-top: 1px solid rgb(199, 199, 199);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 5.95px 5.95px 2.6px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    padding: 15px;
+    padding-left: 20px;
+
+  }
+
+  .modal > section .alarm-title{
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  .modal > section .alarm-text{
+    color: #999;
+    font-size: 0.8em;
+  }
   .modal > section .dm-user{
     font-weight: bold;
   }
 
-  .modal > section .dmFrame{
-    height: 80%;
-    width: 95%;
-    border-radius: 10px;
-    border: 2px solid rgb(150, 150, 150);
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .modal > section .dmFrame input{ 
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    border: 1px solid rgb(100, 100, 100);
-    padding-left: 20px;
-  }
-  .modal > section .dmFrame .me{
-    border: 1px solid rgb(223, 223, 223);
-    padding: 5px;
-    border-radius: 10px;
-    text-align: right;
-    margin-bottom: 5%;
-    float: right !important;
-    margin-left: auto;
-    margin-right: 5%;
-    box-shadow: rgba(0, 0, 0, 0.15) 3.95px 3.95px 1.6px;
-}
-
-.modal > section .dmFrame .you{
-    border: 1px solid rgb(223, 223, 223);
-    padding: 5px;
-    border-radius: 10px;
-    text-align: right;
-    margin-bottom: 5%;
-    float: right !important;
-    margin-right: auto;
-    margin-left: 5%;
-    box-shadow: rgba(0, 0, 0, 0.15) 3.95px 3.95px 1.6px;
-}
-
-.modal > section .dmFrame .send-time{
-    text-align: center;
-    margin-bottom: 15px;
-    font-size: 0.9em;
-    color: rgb(150, 150, 150);
-}
-
-.modal > section .dmFrame .send-day{
-    background-color: #12DB64;
-    border: 1px solid #12DB64;
-    padding: 0 20px;
-    border-radius: 20px;
-    margin: 0 auto;
-    font-size: 0.8em;
-    color: white;
-    margin-bottom: 15px;
-}
   .modal > section > header {
     position: relative;
     padding: 16px 64px 16px 16px;

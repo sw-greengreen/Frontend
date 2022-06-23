@@ -8,6 +8,7 @@ function Navigation(props) {
   const [modalOpen, setModalOpen] = useState(false);
   const [isUpload, setIsUpload] = useState(false);
   const [isFindIt, setFindIt] = useState(false);
+  const [isLogin, setIsLogin] = useState(false);
 
 
 
@@ -15,12 +16,15 @@ function Navigation(props) {
     setIsUpload(false);
   }
 
+  if(window.location.pathname !=="/findIt" && window.location.pathname !=="/findBoardUpload" && isFindIt){
+    setFindIt(false);
+  }
   useEffect(() => {
     if(window.location.pathname ==="/boardUpload" || window.location.pathname ==="/pleaseFind" && !isUpload){
       setIsUpload(true);
     }
 
-    if(window.location.pathname ==="/findIt" && !isFindIt){
+    if(window.location.pathname ==="/findIt"  || window.location.pathname ==="/findBoardUpload" && !isFindIt){
       setFindIt(true);
     }
     document.addEventListener('click', clickModalOutside);
@@ -46,10 +50,11 @@ function Navigation(props) {
  
           <div className='logoFrame'>
               <div className='logo'>
-                <img alt='logo img'></img>
+                <img onClick={()=>{navigate("/")}} style={{width:"200px"}} src='img/logo.png' alt='logo img'></img>
                 
               </div>
-              {isUpload ? 
+              {
+              isUpload ? 
                   <div className='find-please'>
                     
                   <span style={{color:"#12DB64"}} onClick={() => navigate("/pleaseFind")}>찾아주세요&nbsp;</span>&nbsp;<span onClick={()=>{navigate("/findIt")}}>찾았어요</span>
@@ -68,7 +73,9 @@ function Navigation(props) {
               }
               
           </div>
-          {isUpload ?
+          {
+          isLogin ?
+          isUpload ?
           <div className='loginFrame'>
               
           <div className='login-text'>| <span onClick={()=>{navigate("/boardUpload")}}>글쓰기</span> | <span>마이페이지</span> | <span className='alarm' onClick={openModal}>알림</span> | </div>
@@ -95,12 +102,14 @@ function Navigation(props) {
           </div>
           
           </div>
-          }
+          :
           
-          {/* <div className='login-join'>
-                로그인/회원가입
-              </div> */}
+          <div className='loginFrame'>
+                <div className='login-join' onClick={()=>{navigate("/login")}}>로그인/회원가입</div>
+              </div> 
              
+          }
+
 
               <Modal open={modalOpen} close={closeModal} header="Modal heading">
                 <main> {props.children} </main>
