@@ -73,6 +73,7 @@
     margin-left: 15%;
     display: flex;
     margin-bottom: 1%;
+    
 }
 
 
@@ -80,9 +81,12 @@
 #boardUpload .board-hashtag{
     border: 1px solid rgb(229, 229, 229);
     background-color: rgb(229, 229, 229);
-    border-radius: 10px;
+    border-radius: 20px;
     margin-right: 10px;
     padding: 0 20px;
+    width: 60%;
+    height: 40px;
+    padding-left: 40px;
 }
 
 #boardUpload .board-hashtag-empty{
@@ -101,24 +105,40 @@
     margin-top: 3%;
     font-weight: bold;
     display: flex;
+    margin-bottom: 0;
 }
 
 #boardUpload .title input{
 height: 25px;
 width: 80%;
 padding: 10px;
+border: 1px solid rgb(201, 201, 201);
+box-shadow: rgba(0, 0, 0, 0.15) 5px 5.95px 5.95px 2.6px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+
+#boardUpload .title input::placeholder{
+    color: rgb(199, 199, 199);
 }
 
 #boardUpload .content textarea{
     width: 80%;
     height: 150px;
     padding-left: 10px;
+    border: 1px solid rgb(199, 199, 199);
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 5.95px 5.95px 2.6px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+
+#boardUpload .content textarea::placeholder{
+    color: rgb(199, 199, 199);
 }
 
 #boardUpload .content{
-    margin-top: 3%;
+    margin-top: 2%;
     font-weight: bold;
     display: flex;
+    font-size: 1.2em;
 
 }
 
