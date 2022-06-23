@@ -9,11 +9,6 @@
     background: linear-gradient( to right, #FFE26A, #FEBB77 );
 }
 
-#pleaseFind .banner-text{
-    width: 40%;
-    padding-top: 2.5%;
-    padding-left: 4%;
-}
 
 #pleaseFind .b-text1{
     font-size: 3.5em;
@@ -78,7 +73,6 @@
     margin: 0 15%;
     justify-content: space-between;
     margin-top: 4%;
-    
 }
 
 #pleaseFind .item-board .right-header{
@@ -126,19 +120,26 @@
 }
 
 #pleaseFind .item-list{
-    margin: 0 15%;
-    display: flex;
+    margin-left: 17%;
     margin-top: 2%;
+    margin-right: 15%;
+}
+
+#pleaseFind .item-list .boxFrame{
+    display: inline-block;
+    margin-left: 2%;
 }
 
 #pleaseFind .boxFrame{
     position: relative;
-    width: 19%;
+    width: 220px;
     margin-right: 2%;
     height: 260px;
     background-color: rgb(229, 229, 229);
     border-radius: 10px;
     padding: 1%;
+    margin-bottom: 5%;
+    margin-right: 0%;
 }
 
 .boxFrame:last-child{

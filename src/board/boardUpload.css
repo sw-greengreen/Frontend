@@ -8,7 +8,7 @@
     padding-top: 5%;
 }
 
-#boardUpload .boardFrame span:last-child{
+#boardUpload .boardFrame span:first-child{
     color: #12DB64;
 }
 

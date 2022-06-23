@@ -5,8 +5,91 @@ import {BsCaretLeft} from "react-icons/bs";
 import {BsCaretRight} from "react-icons/bs";
 import {BsChevronLeft} from "react-icons/bs";
 import {BsChevronRight} from "react-icons/bs";
-function pleaseFind() {
-  
+import { useNavigate } from 'react-router-dom';
+import { call } from '../hooks/usefetch';
+import { useEffect, useState } from 'react';
+function PleaseFind() {
+  const [postList, setPostList] = new useState({});
+  const [num, setNum] = new useState(0);
+  const navigate = useNavigate();
+
+
+  useEffect(()=>{
+    call("/api/v1/post/all", "GET", "").then((res) =>{
+      
+      if(res.success ==='true' || res.success){
+        setPostList(res.result);
+        setNum(res.result.length)
+        console.log(res.result.length)
+        console.log(res);
+      }
+    })
+  },[])
+
+  function repeatBox(){
+    console.log(postList[0]);
+    let emptyNum = 10;
+    let arr= [];
+    
+    for(let i = 0; i< num; i++){
+      if(postList[i].postType==="LOST"){
+        
+        emptyNum--;
+      arr.push(
+        <div className='boxFrame' onClick={()=>{navigate("/boardDetail", {state: postList[i].id})}}>
+        <div className='pictureFrame'>
+          `<img src={"/img/"+postList[i].photo}></img>`
+        </div>
+        <div className='board-title'>
+          <h5>{postList[i].id+". "}{postList[i].title}</h5>
+        </div>
+        <hr/>
+        <p><span className='border-writer'>{postList[i].user.name}</span><span className='border-time'>24분 전</span></p>
+        <div className='board-tag'>
+          {postList[i].resolvingStatus==="WAITING" ? 
+          <div className='unresolved'>
+            미해결
+          </div>
+          :
+          <div className='solution'>
+            해결
+          </div>
+          }
+          
+          <div className='hashtag'>
+            {postList[i].hashtag}
+          </div>
+        </div>
+      </div>
+      )
+    }
+    }
+
+    for(let i = 0; i<emptyNum; i++){
+      arr.push(
+      <div className='boxFrame'>
+            <div className='pictureFrame'>
+              &nbsp;
+            </div>
+            <div className='board-title'>
+              <h5>&nbsp;</h5>
+            </div>
+            <hr/>
+            <p><span className='border-writer'></span><span className='border-time'>&nbsp;</span></p>
+            <div className='board-tag'>
+              <div className='unresolved'>
+              &nbsp;
+              </div>
+              <div className='hashtag'>
+              &nbsp;
+              </div>
+            </div>
+          </div>
+          )
+    }
+
+    return arr;
+  }
     return (
       <div id="pleaseFind">
         <div className="banner">
@@ -32,95 +115,8 @@ function pleaseFind() {
           </div>
         </div>
         <div className='item-list'>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-                <img src='/img/test_img.jpg'></img>
-              </div>
-              <div className='board-title'>
-                <h5>121. 회색 가죽지갑 찾아가...</h5>
-              </div>
-              <hr/>
-              <p><span className='border-writer'>지영84</span><span className='border-time'>24분 전</span></p>
-              <div className='board-tag'>
-                <div className='solution'>
-                  해결
-                </div>
-                <div className='hashtag'>
-                #가죽지갑
-                </div>
-              </div>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-                <img src='/img/test_img.jpg'></img>
-              </div>
-              <div className='board-title'>
-                <h5>53. 국민은행 체크카드 민...</h5>
-              </div>
-              <hr/>
-              <p><span className='border-writer'>지영84</span><span className='border-time'>12시간 전</span></p>
-              <div className='board-tag'>
-                <div className='unresolved'>
-                  미해결
-                </div>
-                <div className='hashtag'>
-                #체크카드
-                </div>
-              </div>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-        </div>
-        <div className='item-list'>
-          <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-            <div className='boxFrame'>
-              <div className='pictureFrame'>
-              </div>
-              <h5>&nbsp;</h5>
-              <hr/>
-            </div>
-        </div>
-        <div className='item-list'>
-            
+          {repeatBox()}
+       
         </div>
         <div className='transfer-num'>
           <BsCaretLeft/> &nbsp;
@@ -134,4 +130,4 @@ function pleaseFind() {
     );
   }
   
-  export default pleaseFind;
+  export default PleaseFind;
