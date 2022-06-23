@@ -37,9 +37,10 @@ function BoardDetail(props) {
 
   const insertComment = async()=>{
     try{
-      await call("/post/"+boardNum+"/comment", "POST", {"content":content, "postId":boardNum, "writer":postWriter})
+      await call("/post/"+boardNum+"/comment", "POST", {"content":content, "postId":boardNum, "writer":window.localStorage.getItem("username")})
       .then((res)=>{
-        
+        window.location.replace("/boardDetail")
+        alert("댓글 작성이 완료되었습니다.");
         }
         
         )
