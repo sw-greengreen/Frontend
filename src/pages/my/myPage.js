@@ -22,16 +22,25 @@ function MyPage() {
 
   useEffect(() => {
     async function getUserInfo(){
-      call(`/auth/${userid}`, "GET").then((response)=>{
-        console.log(response);
-        if(response.success){
-          setName(response.result.name);
-          setUsername(response.result.username);
-          setPhone(response.result.phone);
-          setPoint(response.result.point);
-          setAchievement(response.result.achievement);
-        }
-      });
+      if (userid == null){
+        Swal.fire({
+          icon: 'error',
+          title: '로그인 후 이용해 주세요.',
+        })
+        navigate("/login")
+      }
+      else{
+        call(`/auth/${userid}`, "GET").then((response)=>{
+          console.log(response);
+          if(response.success){
+            setName(response.result.name);
+            setUsername(response.result.username);
+            setPhone(response.result.phone);
+            setPoint(response.result.point);
+            setAchievement(response.result.achievement);
+          }
+        });
+      }
     }
     getUserInfo();
   }, []);
